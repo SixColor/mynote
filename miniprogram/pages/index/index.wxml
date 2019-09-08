@@ -1,0 +1,30 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="header">
+    <van-tabs type="card" color="#07c160" swipeable sticky="false" active="{{activeTab}}">
+      <van-tab title="备忘">
+        <van-field maxlength="25" value="{{ subject }}" required clearable label="主题" placeholder="请输入主题" bind:blur="subjectInput" />
+        <van-field type="textarea" autosize="true" value="{{ content }}" clearable label="说明" placeholder="请输入详细说明" bind:blur="memoInput" />
+        <van-field type="textarea" readonly autosize value="{{  address }}" center label="位置" use-button-slot right-icon="aim" bind:click-icon="getLocation">
+          <!-- <van-button custom-class="non-color" round plain slot="button" size="mini" type="default" bind:click="getLocation">定位
+            <van-icon name="location-o" />
+          </van-button> -->
+        </van-field>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <van-field right-icon="underway-o" label="预计完成" readonly value="{{time}}"></van-field>
+        </picker>
+        <view class="margin20">
+          <van-row>
+            <van-col offset="6" span="8">
+              <button size="mini" type="primary" bindtap="saveNote">保存</button>
+            </van-col>
+            <van-col offset="2" span="8">
+              <button size="mini" type="primary" bindtap="markFinished">标记完成</button>
+            </van-col>
+          </van-row>
+        </view>
+      </van-tab>
+      <!-- <van-tab title="记账">记账功能开发中...</van-tab> -->
+    </van-tabs>
+  </view>
+</view>

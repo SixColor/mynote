@@ -1,0 +1,36 @@
+/* miniprogram/pages/myprofile/myprofile.wxss */
+
+.user-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-info {
+  margin-top: 40rpx;
+}
+
+.user-todo{
+  margin-top:40rpx;
+}
+
+.user-nickname {
+  line-height: 120rpx;
+}
+
+.btn-login {
+  line-height: 120rpx;
+  border: none;
+  background-color: white;
+}
+
+.btn-login::after {
+  background-color: none;
+  border: 0;
+}
+
+.img-todo{
+  width: 32px;
+  height: 32px;
+}

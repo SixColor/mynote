@@ -1,0 +1,26 @@
+<view>
+    <van-row custom-class="user-info">
+        <van-col offset="2" span="4">
+            <image class="user-avatar" src="{{userInfo.avatarUrl}}" />
+        </van-col>
+        <van-col offset="1" span="6" class="user-nickname">
+            <text wx:if="{{gotUserInfo}}">{{userInfo.nickName}}</text>
+            <button wx:else class="btn-login" open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="default" loading="{{loading}}" bindtap="login">
+                点击登录
+            </button>
+        </van-col>
+    </van-row>
+    <van-row custom-class="user-todo" gutter="20">
+        <!-- <van-col offset="1" span="2">
+            <image src="../../images/todo.png" class="img-todo" />
+        </van-col>
+        <van-col>待办</van-col> -->
+        <van-col span="24">
+            <van-cell value="{{gotUserInfo?'待办 ('+noteCount+')':'请登录' }}" icon="{{remotetoicon}}" is-link>
+                <view slot="title">
+                    <view class="van-cell-text">待办</view>
+                </view>
+            </van-cell>
+        </van-col>
+    </van-row>
+</view>

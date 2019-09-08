@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "van-panel": "/vantui/panel/index",
+    "van-cell": "/vantui/cell/index",
+    "van-cell-group": "/vantui/cell-group/index",
+    "van-icon": "/vantui/icon/index",
+    "van-tag": "/vantui/tag/index",
+    "van-switch": "/vantui/switch/index",
+    "van-row": "/vantui/row/index",
+    "van-col": "/vantui/col/index",
+    "van-field": "/vantui/field/index"
+  }
+}

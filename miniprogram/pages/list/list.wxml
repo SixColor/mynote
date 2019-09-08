@@ -1,0 +1,30 @@
+<view class="memo_list">
+  <view class="note-list" wx:for="{{noteList}}" wx:key="{{index}}">
+    <view class="memo_item">
+      <van-row class="memo_item_subject">
+        <van-col span="4">主题:</van-col>
+        <van-col span="20">{{item.subject}}</van-col>
+      </van-row>
+      <van-row>
+        <van-col span="4">内容:</van-col>
+        <van-col span="20" custom-class="memo_item_content">{{item.content}}</van-col>
+      </van-row>
+      <van-row>
+        <van-col span="6">
+          <van-tag type="{{item.isFinished?'success':'primary'}}">
+            {{item.isFinished?"已完成":"未完成"}}
+          </van-tag>
+        </van-col>
+        <view wx:if="{{!item.isFinished}}">
+          <van-col offset="10" span="4" class="memo_item_state_switch_text">
+            <span style="line-height:30px;">标记完成</span>
+          </van-col>
+          <van-col span="4" custom-class="memo_item_state">
+            <van-switch data-item="{{item}}"  id="{{item._id}}" bind:tap="markFinished" checked="{{item.isFinished}}" v-model="{{isFinished}}" size="18px"></van-switch>
+          </van-col>
+        </view>
+      </van-row>
+      <view class="memo_item_underline"></view>
+    </view>
+  </view>
+</view>

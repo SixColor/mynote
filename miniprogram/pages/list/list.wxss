@@ -1,0 +1,77 @@
+/* pages/list/list.wxss */
+
+.memo_list {
+  /*
+  列表页面
+  */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.memo_item {
+  /*
+  列表项
+  */
+
+  margin-top: 8px;
+
+  width: 94%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.memo_item_subject {
+  /*
+  主题
+  */
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.memo_item_content {
+  /*
+  内容
+  */
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #999999;
+}
+
+.memo_item_underline {
+  width: 94%;
+  height: 1px;
+  border-top: solid #eeeeee 1px;
+  margin: 0 auto;
+  margin-top: 8px;
+}
+
+.memo_item_state {
+  margin-top: 10rpx;
+}
+.memo_item_state_switch_text {
+  font-size: 14px;
+  color: #07c160;
+ 
+}
+
+.mark-checkbox {
+  color: #3bd71d;
+  font-weight: 400;
+  font-size: 20rpx;
+}
+
+.finished-time {
+  color: #3bd71d;
+  font-weight: 400;
+  font-size: 20rpx;
+  margin-left: 30rpx;
+}
+
+.van-cell-text {
+  text-overflow: ellipsis;
+}
